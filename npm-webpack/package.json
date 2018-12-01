@@ -1,0 +1,28 @@
+{
+  "name": "re-frame-and-reagent-and-slatejs",
+  "version": "0.0.1",
+  "author": "jhund@clearcove.ca",
+  "scripts": {
+    "watch": "webpack -d --watch",
+    "build": "webpack -p"
+  },
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/npm/npm.git"
+  },
+  "dependencies": {
+    "immutable": "^3.8.2",
+    "is-hotkey": "0.1.2",
+    "react": "16.4.1",
+    "react-dom": "16.4.1",
+    "create-react-class": "15.6.3",
+    "slate": "0.44.6",
+    "slate-html-serializer": "0.7.30",
+    "slate-react": "0.21.12"
+  },
+  "devDependencies": {
+    "npm": "^5.8.0",
+    "webpack": "^3.8.1"
+  }
+}

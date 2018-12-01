@@ -1,0 +1,26 @@
+.rrs-header {
+  text-align: center;
+}
+
+p {
+  margin: 0;
+}
+
+.rrs-section {
+  margin-bottom: 3rem;
+  padding: 1rem;
+  box-shadow: 2px 2px 12px 0px rgba(50, 50, 50, 0.61);
+}
+
+.section-content {
+  padding: 1rem;
+}
+
+.rrs-slatejs-editor {
+  padding: 1rem;
+  box-shadow: inset 1px 1px 5px 0px rgba(50, 50, 50, 0.61);
+}
+
+.rrs-slatejs-toolbar {
+  margin-bottom: 2rem;
+}
