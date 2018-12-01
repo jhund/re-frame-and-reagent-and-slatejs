@@ -1,8 +1,1 @@
-/*-init.clj
 /*.log
-/npm-webpack/node_modules
-/resources/public/js/bundle.js
-/resources/public/js/bundle.js.map
-/resources/public/js/compiled
-/target
-out
