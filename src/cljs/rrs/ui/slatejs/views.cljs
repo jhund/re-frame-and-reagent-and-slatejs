@@ -15,6 +15,9 @@
         this-atom (atom nil)
         cached-editor-values-atom slatejs.db/cached-editor-values-atom
         editor-ref-atom slatejs.db/editor-ref-atom
+        html (:html section-data)
+        initial-ed-val (slatejs.core/effective-editor-value section-key html)
+        _ (swap! cached-editor-values-atom assoc section-key initial-ed-val)
         on-change-fn (fn [change-or-editor]
                        (let [new-value (.-value change-or-editor)]
                          (swap! cached-editor-values-atom assoc section-key new-value)
