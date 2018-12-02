@@ -10,8 +10,8 @@
 (defn editor
   "Renders an editor instance.
   Uses a form3 reagent component to manage React lifecycle methods."
-  [section-data]
-  (let [section-key (:section-key section-data)
+  [section-key]
+  (let [section-data @(re-frame/subscribe [:rrs.section/sub-data section-key])
         this-atom (atom nil)
         cached-editor-values-atom slatejs.db/cached-editor-values-atom
         editor-ref-atom slatejs.db/editor-ref-atom
