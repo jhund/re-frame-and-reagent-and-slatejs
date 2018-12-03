@@ -2,14 +2,9 @@
   :dependencies [[org.clojure/clojure "1.9.0"]
                  [org.clojure/clojurescript "1.10.339"]
                  [re-frame "0.10.6"]
-                 [reagent "0.8.1"]
-                 [re-frame-utils "0.1.0"]
-                 [re-pressed "0.2.2"]
-                 [secretary "1.2.3"]
-                 [venantius/accountant "0.2.4"]]
+                 [reagent "0.8.1" :exclusions [cljsjs/react cljsjs/react-dom cljsjs/react-dom-server]]]
 
-  :plugins [[lein-cljsbuild "1.1.7"]
-            [lein-cljfmt "0.6.2"]] ; lein cljfmt check OR lein cljfmt fix <path>
+  :plugins [[lein-cljsbuild "1.1.7"]]
 
   :min-lein-version "2.7.1"
 
@@ -39,8 +34,7 @@
                                        :external-config      {:devtools/config {:features-to-install :all}}
                                        :closure-defines      {"re_frame.trace.trace_enabled_QMARK_" true}
                                        :foreign-libs         [{:file "resources/public/js/bundle.js"
-                                                               :provides ["react" "react-dom" "create-react-class" "react-dom/server"],
+                                                               :provides ["react" "react-dom" "react-dom/server"],
                                                                :global-exports {react React
                                                                                 react-dom ReactDOM
-                                                                                create-react-class createReactClass
                                                                                 react-dom/server ReactDOMServer}}]}}]})
