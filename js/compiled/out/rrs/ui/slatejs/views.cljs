@@ -10,11 +10,14 @@
 (defn editor
   "Renders an editor instance.
   Uses a form3 reagent component to manage React lifecycle methods."
-  [section-data]
-  (let [section-key (:section-key section-data)
+  [section-key]
+  (let [section-data @(re-frame/subscribe [:rrs.section/sub-data section-key])
         this-atom (atom nil)
         cached-editor-values-atom slatejs.db/cached-editor-values-atom
         editor-ref-atom slatejs.db/editor-ref-atom
+        html (:html section-data)
+        initial-ed-val (slatejs.core/effective-editor-value section-key html)
+        _ (swap! cached-editor-values-atom assoc section-key initial-ed-val)
         on-change-fn (fn [change-or-editor]
                        (let [new-value (.-value change-or-editor)]
                          (swap! cached-editor-values-atom assoc section-key new-value)
@@ -62,3 +65,10 @@
    [toolbar-button editor-ref "bold" active-marks selection-digest [:strong "Bold"]]
    [:span " "]
    [toolbar-button editor-ref "italic" active-marks selection-digest [:em "Italic"]]])
+
+;    * we could use a reagent/atom for editor ref. Resetting it will trigger a re-render because it is de-refed in props to editor component. However it would only refresh once per animation frame (that's when reagent triggers a re-render). This results in slightly sluggish appearance of typing, and worse, it can result in garbled output if you type faster than reagent re-renders. The cursor will appear to jump around.
+;    * So instead we trigger a force-update for instant editor re-renders. We can still throttle persistence into app-db because no-one will notice. As long as typing behavior is not sluggish.
+
+      ;; NOTE: Normally we would repeat the arguments to the outer function, however they are not
+      ;; used here since we don't rely on reagent to re-render the editor, but on force-update
+      ;; instead.

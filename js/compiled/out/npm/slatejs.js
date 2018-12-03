@@ -11,4 +11,4 @@ npm.slatejs.Editor = goog.object.get(npm.slatejs.slate_react,"Editor");
 npm.slatejs.Html = goog.object.get(npm.slatejs.slate_html_serializer,"default");
 npm.slatejs.Value = goog.object.get(npm.slatejs.slate,"Value");
 
-//# sourceMappingURL=slatejs.js.map?rel=1543701277513
+//# sourceMappingURL=slatejs.js.map?rel=1543803796701

@@ -32,4 +32,4 @@ return cljs.core.flatten.call(null,cljs.core.conj.call(null,rrs.ui.db.data_path.
 rrs.ui.db.data_path.cljs$lang$maxFixedArity = 1;
 
 
-//# sourceMappingURL=db.js.map?rel=1543701277490
+//# sourceMappingURL=db.js.map?rel=1543803796680

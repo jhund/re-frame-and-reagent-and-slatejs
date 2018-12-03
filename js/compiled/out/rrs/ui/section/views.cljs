@@ -25,7 +25,7 @@
     [:div.rrs-section.rrs-section--editable
      {:on-click #(re-frame/dispatch [:rrs.ui/cmd-select-current-section section-key])}
      [:h3 title]
-     [ui.slatejs.views/editor section-data]]))
+     [ui.slatejs.views/editor section-key]]))
 
 (defn section
   "Renders a section identifed by `section-key`."

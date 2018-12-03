@@ -46,4 +46,4 @@ return cljs.core.with_meta(new cljs.core.PersistentVector(null, 2, 5, cljs.core.
 ,section_keys)),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [rrs.ui.views.data_inspector], null),new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [rrs.ui.views.keyboard_shortcuts], null)], null);
 });
 
-//# sourceMappingURL=views.js.map?rel=1543701277605
+//# sourceMappingURL=views.js.map?rel=1543803796813

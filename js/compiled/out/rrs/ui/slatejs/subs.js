@@ -10,4 +10,4 @@ re_frame.core.reg_sub.call(null,new cljs.core.Keyword("rrs.slatejs","sub-selecti
 return cljs.core.get_in.call(null,db,rrs.ui.slatejs.db.data_path.call(null,new cljs.core.Keyword(null,"selection-digest","selection-digest",964829504)));
 }));
 
-//# sourceMappingURL=subs.js.map?rel=1543701277476
+//# sourceMappingURL=subs.js.map?rel=1543803796664

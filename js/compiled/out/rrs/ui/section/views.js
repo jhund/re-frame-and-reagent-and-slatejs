@@ -29,7 +29,7 @@ return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMP
 return (function (){
 return re_frame.core.dispatch.call(null,new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword("rrs.ui","cmd-select-current-section","rrs.ui/cmd-select-current-section",-2130125635),section_key], null));
 });})(section_data,title))
-], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"h3","h3",2067611163),title], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [rrs.ui.slatejs.views.editor,section_data], null)], null);
+], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null,"h3","h3",2067611163),title], null),new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [rrs.ui.slatejs.views.editor,section_key], null)], null);
 });
 /**
  * Renders a section identifed by `section-key`.
@@ -44,4 +44,4 @@ return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMP
 }
 });
 
-//# sourceMappingURL=views.js.map?rel=1543701277586
+//# sourceMappingURL=views.js.map?rel=1543803796794

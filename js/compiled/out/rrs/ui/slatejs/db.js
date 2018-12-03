@@ -52,4 +52,4 @@ rrs.ui.slatejs.db.db_get_editor_ref = (function rrs$ui$slatejs$db$db_get_editor_
 return cljs.core.deref.call(null,rrs.ui.slatejs.db.editor_ref_atom);
 });
 
-//# sourceMappingURL=db.js.map?rel=1543701277469
+//# sourceMappingURL=db.js.map?rel=1543803796657

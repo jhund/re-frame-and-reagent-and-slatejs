@@ -38,4 +38,4 @@ rrs.ui.section.db.db_get_data = (function rrs$ui$section$db$db_get_data(db,secti
 return cljs.core.get_in.call(null,db,rrs.ui.section.db.data_path.call(null,section_key));
 });
 
-//# sourceMappingURL=db.js.map?rel=1543701277484
+//# sourceMappingURL=db.js.map?rel=1543803796672

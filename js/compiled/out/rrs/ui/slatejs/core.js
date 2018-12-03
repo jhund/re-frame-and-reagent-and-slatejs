@@ -173,4 +173,4 @@ var selection_digest = rrs.ui.slatejs.core.selection_digest.call(null,editor_val
 return new cljs.core.PersistentArrayMap(null, 4, [new cljs.core.Keyword(null,"html","html",-998796897),html,new cljs.core.Keyword(null,"plain-text","plain-text",369463634),plain_text,new cljs.core.Keyword(null,"active-marks","active-marks",-994970259),active_marks,new cljs.core.Keyword(null,"selection-digest","selection-digest",964829504),selection_digest], null);
 });
 
-//# sourceMappingURL=core.js.map?rel=1543701277548
+//# sourceMappingURL=core.js.map?rel=1543803796736

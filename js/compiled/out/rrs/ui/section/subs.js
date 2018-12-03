@@ -10,4 +10,4 @@ var section_key = cljs.core.nth.call(null,vec__23218,(1),null);
 return cljs.core.get_in.call(null,db,rrs.ui.section.db.data_path.call(null,section_key));
 }));
 
-//# sourceMappingURL=subs.js.map?rel=1543701277503
+//# sourceMappingURL=subs.js.map?rel=1543803796694

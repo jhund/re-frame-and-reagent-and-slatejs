@@ -9,4 +9,4 @@ re_frame.core.reg_event_db.call(null,new cljs.core.Keyword("rrs","cmd-initialize
 return rrs.db.default_db;
 }));
 
-//# sourceMappingURL=events.js.map?rel=1543701277638
+//# sourceMappingURL=events.js.map?rel=1543803796848

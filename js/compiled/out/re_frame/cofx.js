@@ -124,4 +124,4 @@ return cljs.core.assoc.call(null,coeffects,new cljs.core.Keyword(null,"db","db",
 }));
 re_frame.cofx.inject_db = re_frame.cofx.inject_cofx.call(null,new cljs.core.Keyword(null,"db","db",993250759));
 
-//# sourceMappingURL=cofx.js.map?rel=1543701277071
+//# sourceMappingURL=cofx.js.map?rel=1543803796191
