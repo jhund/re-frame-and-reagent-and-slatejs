@@ -17,7 +17,8 @@
   :figwheel {:css-dirs ["resources/public/css"]}
 
   :profiles {:dev {:dependencies [[binaryage/devtools "0.9.10"]]
-                   :plugins      [[lein-figwheel "0.5.15"]]}}
+                   :plugins      [[lein-figwheel "0.5.15"]]}
+             :production {}}
 
   :cljsbuild {:builds [{:id "dev"
                         :source-paths ["src/cljs"]
@@ -34,4 +35,16 @@
                                                                :provides ["react" "react-dom" "react-dom/server"],
                                                                :global-exports {react React
                                                                                 react-dom ReactDOM
-                                                                                react-dom/server ReactDOMServer}}]}}]})
+                                                                                react-dom/server ReactDOMServer}}]}}
+                       {:id "min"
+                        :source-paths ["src/cljs"]
+                        :compiler     {:main            rrs.core
+                                       :output-to       "resources/public/js/compiled/app.js"
+                                       :optimizations   :simple
+                                       :closure-defines {goog.DEBUG false}
+                                       :pretty-print    false
+                                       :foreign-libs    [{:file "resources/public/js/bundle.js"
+                                                          :provides ["react" "react-dom" "react-dom/server"],
+                                                          :global-exports {react React
+                                                                           react-dom ReactDOM
+                                                                           react-dom/server ReactDOMServer}}]}}]})

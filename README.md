@@ -62,4 +62,9 @@ or
 
 ## Production Build
 
-This repo does not support a production build.
+To compile clojurescript to javascript:
+
+```
+lein clean
+lein with-profile production cljsbuild once min
+```
