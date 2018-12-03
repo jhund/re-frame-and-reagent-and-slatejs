@@ -2,7 +2,25 @@
 
 This repo contains example code illustrating how to integrate the slatejs editor with a re-frame (and reagent) clojurescript app.
 
-## Development Mode
+It's an advanced use case with the following features:
+
+* Multiple editable sections exist on the page. One can be edited at a time. Select a section to edit by clicking on its card.
+* Shared toolbar, separate from the editor. Acts on the currently selected editor.
+* Bold and italic formatting via toolbar or keyboard shortcuts.
+* Persistence of edited text into re-frame app-db (as HTML).
+* Used in production with 1K editabl sections on a single page.
+
+## Some notes
+
+Integrating SlateJS into re-frame/reagent is a bit tricky for advanced uses. There are some portions that are not idiomatic re-frame/reagent. E.g., we use regular atoms to cache editor values, and the editor reference.
+
+The code is well commented. I would start exploring at (src/cljs/rrs/ui/slatejs/views.cljs)[https://github.com/jhund/re-frame-and-reagent-and-slatejs/blob/master/src/cljs/rrs/ui/slatejs/views.cljs] where the SlateJS editor is being rendered.
+
+## Demo
+
+You can view the [demo](https://jhund.github.io/re-frame-and-reagent-and-slatejs/index.html). Please note that this is a dev build, not a production build.
+
+## Play with the code yourself
 
 ### Figwheel
 
