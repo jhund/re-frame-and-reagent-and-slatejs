@@ -16,8 +16,7 @@
 
   :figwheel {:css-dirs ["resources/public/css"]}
 
-  :profiles {:dev {:dependencies [[binaryage/devtools "0.9.10"]
-                                  [day8.re-frame/re-frame-10x "0.3.2"]]
+  :profiles {:dev {:dependencies [[binaryage/devtools "0.9.10"]]
                    :plugins      [[lein-figwheel "0.5.15"]]}}
 
   :cljsbuild {:builds [{:id "dev"
@@ -29,10 +28,8 @@
                                        :output-dir           "resources/public/js/compiled/out"
                                        :asset-path           "js/compiled/out"
                                        :source-map-timestamp true
-                                       :preloads             [devtools.preload
-                                                              day8.re-frame-10x.preload]
+                                       :preloads             [devtools.preload]
                                        :external-config      {:devtools/config {:features-to-install :all}}
-                                       :closure-defines      {"re_frame.trace.trace_enabled_QMARK_" true}
                                        :foreign-libs         [{:file "resources/public/js/bundle.js"
                                                                :provides ["react" "react-dom" "react-dom/server"],
                                                                :global-exports {react React
