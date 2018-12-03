@@ -8,13 +8,15 @@ It's an advanced use case with the following features:
 * Shared toolbar, separate from the editor. Acts on the currently selected editor.
 * Bold and italic formatting via toolbar or keyboard shortcuts.
 * Persistence of edited text into re-frame app-db (as HTML).
-* Used in production with 1K editabl sections on a single page.
+* Used in production with 1K editable sections on a single page.
 
 ## Some notes
 
 Integrating SlateJS into re-frame/reagent is a bit tricky for advanced uses. There are some portions that are not idiomatic re-frame/reagent. E.g., we use regular atoms to cache editor values, and the editor reference.
 
 The code is well commented. I would start exploring at (src/cljs/rrs/ui/slatejs/views.cljs)[https://github.com/jhund/re-frame-and-reagent-and-slatejs/blob/master/src/cljs/rrs/ui/slatejs/views.cljs] where the SlateJS editor is being rendered.
+
+npm dependencies are handled separately and included via bundle.js file. The approach follows [Tomer Weller's recipe](http://blob.tomerweller.com/reagent-import-react-components-from-npm).
 
 ## Demo
 
